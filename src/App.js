@@ -11,7 +11,7 @@ import "./ui-kit/ui-kit.css";
 
 function App() {
   return (
-    <div class="app">
+    <div className="app">
       <div class="wrapper">
         <div class="input-space">
           <div class="input-block">
