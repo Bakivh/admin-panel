@@ -1,0 +1,95 @@
+/* Глобальные переменные */
+:root {
+  --primary-color: #a8a8ff;
+  --primary-color-dark: #8055ff;
+  --primary-font: "Ubuntu", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  padding-left: 48px;
+  padding-right: 48px;
+  box-shadow: 0px 32px 128px rgba(0, 0, 0, 0.5),
+    0px 16px 32px rgba(0, 0, 0, 0.34), 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  color: var(--primary-color-dark);
+  background: var(--primary-color);
+  flex-basis: 32px;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
+
+.page__header {
+  padding: 0px;
+  margin: 32px 0;
+}
+
+.filters {
+  flex-basis: 32px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--primary-color);
+  padding: 8px 8px 8px 8px;
+}
+
+.filters__primary_color {
+  background: var(--primary-color-dark);
+}
+
+.filters__search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters__input {
+  width: 256px;
+  height: 32px;
+}
+
+.filters__get-filters {
+  margin-left: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.filters__refresh {
+  margin-left: auto;
+  flex-basis: 32px;
+  height: 32px;
+}
+
+.data-table {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--primary-color-dark);
+  box-sizing: border-box;
+  margin-top: 32px;
+  flex: 1;
+}
+
+.data-table__header {
+  background: var(--primary-color-dark);
+  flex-basis: 48px;
+}
+
+.data-table__body {
+  background: var(--primary-color);
+  flex: 1;
+  min-height: 48px;
+}
+
+.data-table__footer {
+  background: var(--primary-color-dark);
+  flex-basis: 48px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
