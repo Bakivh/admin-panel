@@ -1,12 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./reset.css";
+import "./style.css";
 import "./ui-kit/input.css";
-import './ui-kit/search-bar.css"';
-import './ui-kit/checkbox-radio.css"';
-import './ui-kit/button.css"';
-import './ui-kit/dropdown.css"';
-import './ui-kit/ui-kit.css"';
+import "./ui-kit/search-bar.css";
+import "./ui-kit/checkbox-radio.css";
+import "./ui-kit/button.css";
+import "./ui-kit/dropdown.css";
+import "./ui-kit/ui-kit.css";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
                 <button class="input-block__button">
                   <img
                     class="input-block__button-icon"
-                    src="../icons/x-medium.svg"
+                    src="icons/x-medium.svg"
                   />
                 </button>
               </div>
@@ -55,10 +56,7 @@ function App() {
                   class="input-block__input-text input-block__input-text_disabled"
                   disabled="disabled"
                 />
-                <img
-                  class="input-block__button-icon"
-                  src="../icons/locked.svg"
-                />
+                <img class="input-block__button-icon" src="icons/locked.svg" />
               </div>
             </label>
           </div>
@@ -66,10 +64,7 @@ function App() {
         <div class="search-bar-space">
           <div class="search-block">
             <div class="search-block__input">
-              <img
-                class="search-block__button-icon"
-                src="../icons/search.svg"
-              />
+              <img class="search-block__button-icon" src="icons/search.svg" />
               <input
                 placeholder="Номер заказа или ФИО"
                 type="text"
@@ -79,10 +74,7 @@ function App() {
           </div>
           <div class="search-block">
             <div class="search-block__input">
-              <img
-                class="search-block__button-icon"
-                src="../icons/search.svg"
-              />
+              <img class="search-block__button-icon" src="icons/search.svg" />
               <input
                 value="50744"
                 type="text"
@@ -92,7 +84,7 @@ function App() {
               <button class="search-block__button">
                 <img
                   class="search-block__button-icon"
-                  src="../icons/x-medium.svg"
+                  src="icons/x-medium.svg"
                 />
               </button>
             </div>
