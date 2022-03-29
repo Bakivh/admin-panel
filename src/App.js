@@ -8,6 +8,12 @@ export const App = () => {
     <div className="wrapper">
       <div className="input-space">
         <Input>Дата и время заказа</Input>
+        <Input placeholder="ММ.ДД.ГГГГ" value="06.12.2021" incorrect>
+          Дата и время заказа
+        </Input>
+        <Input placeholder="ММ.ДД.ГГГГ" value="06.12.2021" disabled>
+          Дата и время заказа
+        </Input>
       </div>
     </div>
   );
