@@ -77,11 +77,11 @@
   background: #bad8f5;
 }
 
-.inputText_incorrect {
+.input.input_incorrect .inputText {
   width: 216px;
 }
 
-.inputText_disabled {
+.input.input_disabled .inputText {
   width: 216px;
 }
 
@@ -91,7 +91,7 @@
   padding: 0;
 }
 
-.buttonIcon {
+.icon {
   width: 16px;
   height: 16px;
   margin: 0px 4px;
