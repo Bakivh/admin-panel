@@ -13,7 +13,7 @@ export const Input = ({
   incorrect = false,
   disabled = false,
   label = "",
-  inputType = "text",
+  type = "text",
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
 
@@ -24,19 +24,21 @@ export const Input = ({
 
   return (
     <div className={styles._}>
-      <label className={styles.label} htmlFor={id}>
-        {label}
-      </label>
+      {label != "" && (
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+      )}
       <div className={inputClass}>
         <input
           className={styles.inputText}
           placeholder={placeholder}
-          type={inputType}
+          type={type}
           id={id}
           defaultValue={defaultValue}
           disabled={disabled}
         />
-        {incorrect && (
+        {defaultValue && (
           <button className={styles.button}>
             <img className={styles.icon} src={xMediumIcon} />
           </button>
