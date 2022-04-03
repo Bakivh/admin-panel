@@ -1,12 +1,16 @@
+._ {
+  display: flex;
+}
+
 /* для элемента input c type="checkbox" */
-._ > input {
+._ > .input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
-._ > span {
+._ > .span {
   display: flex;
   align-items: center;
   user-select: none;
@@ -24,7 +28,7 @@
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
-._ > span::before {
+._ > .span::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -36,8 +40,8 @@
   background-repeat: no-repeat;
 }
 
-/* только текстовая */
-.textOnly > span::before {
+/* 
+.textOnly > .span::before {
   content: "";
   width: 0px;
   height: 0px;
@@ -52,14 +56,15 @@
 .textOnly .text {
   margin-left: 0px;
 }
+*/
 
 /* стили для чекбокса, находящегося в состоянии checked */
-._ > input:checked + span::before {
+._ > .input:checked + .span::before {
   border-color: #459df5;
   background-color: #459df5;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23FFFFFF' stroke='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z' stroke='none'/%3E%3C/svg%3E");
 }
 
-._ > input:checked + span > .text {
+._ > .input:checked + .span > .text {
   color: #459df5;
 }

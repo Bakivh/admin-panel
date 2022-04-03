@@ -2,8 +2,8 @@ import cx from "classnames";
 import { useState } from "react";
 import _uniqueId from "lodash/uniqueId";
 
-import xMediumIcon from "common/icons/x-medium.svg";
-import lockedIcon from "common/icons/locked.svg";
+import { ReactComponent as XMediumIcon } from "common/icons/x-medium.svg";
+import { ReactComponent as LockedIcon } from "common/icons/locked.svg";
 
 import styles from "./Input.module.css";
 
@@ -15,10 +15,11 @@ export const Input = ({
   label = "",
   type = "text",
   sizeShort,
+  className,
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
 
-  const inputBlockClass = cx(styles._, {
+  const inputBlockClass = cx(styles._, className, {
     [styles.sizeShort]: sizeShort,
   });
 
@@ -29,7 +30,7 @@ export const Input = ({
 
   return (
     <div className={inputBlockClass}>
-      {label != "" && (
+      {label && (
         <label className={styles.label} htmlFor={id}>
           {label}
         </label>
@@ -45,10 +46,10 @@ export const Input = ({
         />
         {defaultValue && (
           <button className={styles.button}>
-            <img className={styles.icon} src={xMediumIcon} />
+            <XMediumIcon className={styles.icon} />
           </button>
         )}
-        {disabled && <img className={styles.icon} src={lockedIcon} />}
+        {disabled && <LockedIcon className={styles.icon} />}
       </div>
     </div>
   );

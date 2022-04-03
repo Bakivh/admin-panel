@@ -1,9 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
-
-body {
-  background-color: #e5e5e5;
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
 }
-.dropdown-space {
+
+.searchBarSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 352px;
+  height: 192px;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.radioSpace {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 104px;
+  height: 64px;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.inputSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 352px;
+  height: 400px;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.checkboxSpace {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 104px;
+  height: 64px;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.buttonSpace {
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  grid-gap: 12px;
+
+  width: 576px;
+  height: 376px;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.buttonBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+
+  margin-left: 48px;
+}
+
+.dropdownSpace {
   display: grid;
   grid-template-columns: 210px 210px 210px;
 
@@ -18,78 +89,15 @@ body {
   box-sizing: border-box;
   border-radius: 5px;
 }
-.wrapper {
-  display: flex;
-  justify-content: space-evenly;
+
+.buttonInDropdown {
+  margin-top: 8px;
 }
 
-.search-bar-space {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 352px;
-  height: 192px;
-  border: 1px dashed #8055ff;
-  box-sizing: border-box;
-  border-radius: 5px;
+.listInDropdown {
+  padding: 8px 16px;
 }
 
-.radio-space {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 104px;
-  height: 64px;
-  border: 1px dashed #8055ff;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.input-space {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 352px;
-  height: 400px;
-  border: 1px dashed #8055ff;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.checkbox-space {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 104px;
-  height: 64px;
-  border: 1px dashed #8055ff;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.button-space {
-  display: grid;
-  grid-template-columns: 180px 180px 180px;
-  grid-gap: 12px;
-
-  width: 576px;
-  height: 376px;
-  border: 1px dashed #8055ff;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
-.button-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: left;
-
-  margin-left: 48px;
+.dropdownStyleList {
+  padding: 8px 0px;
 }
