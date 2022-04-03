@@ -1,0 +1,139 @@
+/* базовые параметры для кнопки */
+._ {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  border-radius: 4px;
+  border-width: 0px;
+
+  width: min-content;
+}
+
+/* базовые параметры для иконки в кнопке */
+.icon {
+  width: 16px;
+  height: 16px;
+  max-width: none;
+}
+
+/* базовые параметры для текста в кнопке */
+.text {
+  font-family: Ubuntu;
+  font-style: normal;
+
+  white-space: nowrap;
+}
+
+/* большой размер и все паддинги марджины зависящие от него */
+.sizeBig {
+  height: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.sizeBig.iconOnly {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.sizeBig > .icon + .text {
+  margin-left: 8px;
+}
+
+/* маленький размер и все паддинги марджины зависящие от него */
+.sizeSmall {
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.sizeSmall.iconOnly {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.sizeSmall > .icon + .text {
+  margin-left: 4px;
+}
+
+/* ширина на весь элемент, модификатор */
+.widthFlexible {
+  width: 100%;
+  justify-content: center;
+}
+
+/* цветовая схема обычная */
+.themeRegular {
+  background: #459df5;
+}
+
+.themeRegular:hover {
+  background: #3490ec;
+}
+
+.themeRegular:active {
+  background: #1271d1;
+}
+
+.themeRegular > .text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
+
+.themeRegular > .icon {
+  fill: #ffffff;
+}
+
+/* цветовая схема светлая */
+.themeLight {
+  background: transparent;
+}
+
+.themeLight:hover {
+  background: #c6e2ff;
+}
+
+.themeLight:active {
+  background: #51a8ff;
+}
+
+.themeLight > .text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #459df5;
+}
+
+.themeLight > .icon {
+  fill: #459df5;
+}
+
+/* цветовая схема контрастная */
+.themeContrast {
+  background: transparent;
+}
+
+.themeContrast:hover {
+  background: #c7c7c7;
+}
+
+.themeContrast:active {
+  background: #6d6d6d;
+}
+
+.themeContrast > .text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.themeContrast > .icon {
+  fill: #000000;
+}

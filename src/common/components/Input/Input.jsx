@@ -14,8 +14,13 @@ export const Input = ({
   disabled = false,
   label = "",
   type = "text",
+  sizeShort,
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
+
+  const inputBlockClass = cx(styles._, {
+    [styles.sizeShort]: sizeShort,
+  });
 
   const inputClass = cx(styles.input, {
     [styles.input_incorrect]: incorrect,
@@ -23,7 +28,7 @@ export const Input = ({
   });
 
   return (
-    <div className={styles._}>
+    <div className={inputBlockClass}>
       {label != "" && (
         <label className={styles.label} htmlFor={id}>
           {label}
