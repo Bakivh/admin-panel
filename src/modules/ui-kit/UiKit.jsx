@@ -1,5 +1,3 @@
-import styles from "./UiKit.module.css";
-
 import { Input } from "common/components/Input/Input";
 import { Search } from "common/components/Search/Search";
 import { CheckBox } from "common/components/CheckBox/CheckBox";
@@ -11,6 +9,8 @@ import { ReactComponent as IconMoon } from "common/icons/moon.svg";
 import { ReactComponent as IconSun } from "common/icons/sun.svg";
 
 import shortid from "shortid";
+
+import styles from "./UiKit.module.css";
 
 export const UiKit = () => {
   const uniq_name = shortid.generate(); // для радиобуттона
@@ -144,7 +144,7 @@ export const UiKit = () => {
           <div></div>
           <Dropdown sizeShort>
             <Input
-              sizeShort
+              className={styles.input_sizeShort}
               label="Номер страницы"
               placeholder="Введите номер"
             />

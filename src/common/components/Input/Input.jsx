@@ -12,18 +12,18 @@ export const Input = ({
   defaultValue,
   incorrect = false,
   disabled = false,
-  label = "",
+  label,
   type = "text",
   sizeShort,
   className,
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
 
-  const inputBlockClass = cx(styles._, className, {
+  const inputBlockClass = cx(styles._, {
     [styles.sizeShort]: sizeShort,
   });
 
-  const inputClass = cx(styles.input, {
+  const inputClass = cx(styles.input, className, {
     [styles.input_incorrect]: incorrect,
     [styles.input_disabled]: disabled,
   });

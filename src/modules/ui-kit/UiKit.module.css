@@ -101,3 +101,7 @@
 .dropdownStyleList {
   padding: 8px 0px;
 }
+
+.input_sizeShort {
+  width: 128px;
+}
