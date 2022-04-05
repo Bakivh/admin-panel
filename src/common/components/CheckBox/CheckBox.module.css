@@ -1,5 +1,6 @@
 ._ {
   display: flex;
+  background: #ffffff;
 }
 
 /* для элемента input c type="checkbox" */

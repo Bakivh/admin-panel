@@ -13,35 +13,15 @@ export const Button = ({
   let themeClass;
   let sizeClass;
 
-  // определяем цвет (тему)
-  switch (theme) {
-    case "regular":
-      themeClass = styles.themeRegular;
-      break;
-    case "light":
-      themeClass = styles.themeLight;
-      break;
-    case "contrast":
-      themeClass = styles.themeContrast;
-      break;
-    default:
-      throw Error("wrong theme");
-  }
-
-  // размер
-  switch (size) {
-    case "big":
-      sizeClass = styles.sizeBig;
-      break;
-    case "small":
-      sizeClass = styles.sizeSmall;
-      break;
-    default:
-      throw Error("wrong theme");
+  // чтобы не заставлять передавать пропсы с большой буквы
+  function capitalize(s) {
+    return s[0].toUpperCase() + s.slice(1);
   }
 
   // класс собираем
-  const buttonClass = cx(styles._, themeClass, sizeClass, className, {
+  const buttonClass = cx(styles._, className, {
+    [styles[`theme${capitalize(theme)}`]]: true,
+    [styles[`size${capitalize(size)}`]]: true,
     [styles.iconOnly]: !children,
     [styles.widthFlexible]: fullWidth,
   });

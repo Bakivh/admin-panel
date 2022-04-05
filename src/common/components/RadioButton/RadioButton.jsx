@@ -3,10 +3,10 @@ import cx from "classnames";
 import styles from "./RadioButton.module.css";
 
 export const RadioButton = ({
-  // name = shortid.generate(), // индивидуальный идентификатор для имени
   name,
   textOnly = false,
   label,
+  checked,
   className,
 }) => {
   // класс собираем
@@ -16,7 +16,12 @@ export const RadioButton = ({
 
   return (
     <label className={radioClass}>
-      <input className={styles.input} type="radio" name={name} />
+      <input
+        className={styles.input}
+        type="radio"
+        name={name}
+        checked={checked}
+      />
       <span className={styles.span}>
         {label && <div className={styles.text}>{label}</div>}
       </span>

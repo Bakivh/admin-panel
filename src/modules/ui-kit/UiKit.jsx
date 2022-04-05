@@ -13,9 +13,6 @@ import shortid from "shortid";
 import styles from "./UiKit.module.css";
 
 export const UiKit = () => {
-  const uniq_name = shortid.generate(); // для радиобуттона
-  const uniq_name1 = shortid.generate(); // для радиобуттона
-
   return (
     <>
       <div className={styles.wrapper}>
@@ -43,8 +40,8 @@ export const UiKit = () => {
           <CheckBox checked />
         </div>
         <div className={styles.radioSpace}>
-          <RadioButton name={uniq_name} />
-          <RadioButton name={uniq_name} />
+          <RadioButton name="uniq_name" />
+          <RadioButton name="uniq_name" />
         </div>
       </div>
       <div className={styles.wrapper}>
@@ -108,48 +105,49 @@ export const UiKit = () => {
               className={styles.listInDropdown}
               label="Новый"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
             />
             <RadioButton
               className={styles.listInDropdown}
               label="Расчет"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
             />
             <RadioButton
               className={styles.listInDropdown}
               label="Подтвержден"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
+              checked
             />
             <RadioButton
               className={styles.listInDropdown}
               label="Отложен"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
             />
             <RadioButton
               className={styles.listInDropdown}
               label="Выполнен"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
             />
             <RadioButton
               className={styles.listInDropdown}
               label="Отменен"
               textOnly
-              name={uniq_name1}
+              name="uniq_name1"
             />
           </Dropdown>
           <div></div>
-          <Dropdown sizeShort>
+          <Dropdown>
             <Input
               className={styles.input_sizeShort}
               label="Номер страницы"
               placeholder="Введите номер"
             />
           </Dropdown>
-          <Dropdown sizeShort label="Удалить n записей?">
+          <Dropdown label="Удалить n записей?">
             <Button
               className={styles.buttonInDropdown}
               size="small"
@@ -162,7 +160,7 @@ export const UiKit = () => {
               Отмена
             </Button>
           </Dropdown>
-          <Dropdown sizeShort label="Выберите тему">
+          <Dropdown label="Выберите тему">
             <Button
               className={styles.buttonInDropdown}
               size="small"

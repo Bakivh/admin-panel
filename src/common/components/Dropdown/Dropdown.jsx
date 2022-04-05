@@ -2,12 +2,7 @@ import cx from "classnames";
 
 import styles from "./Dropdown.module.css";
 
-export const Dropdown = ({
-  //sizeShort = false,
-  label,
-  className,
-  children,
-}) => {
+export const Dropdown = ({ label, className, children }) => {
   return (
     <>
       <div className={cx(styles._, className)}>

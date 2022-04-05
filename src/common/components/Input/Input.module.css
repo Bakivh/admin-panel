@@ -30,6 +30,8 @@
 
   margin: 8px 0px 0px 0px;
   flex: none;
+
+  background: #ffffff;
 }
 
 .input:focus-within {
@@ -87,6 +89,8 @@
 }
 
 .button {
+  display: flex;
+  align-items: center;
   border: 0;
   background-color: transparent;
   padding: 0;
