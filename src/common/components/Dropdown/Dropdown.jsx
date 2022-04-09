@@ -4,11 +4,9 @@ import styles from "./Dropdown.module.css";
 
 export const Dropdown = ({ label, className, children }) => {
   return (
-    <>
-      <div className={cx(styles._, className)}>
-        {label && <label className={styles.label}>{label}</label>}
-        {children}
-      </div>
-    </>
+    <div className={cx(styles._, className)}>
+      {label && <div className={styles.label}>{label}</div>}
+      {children}
+    </div>
   );
 };

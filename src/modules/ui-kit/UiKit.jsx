@@ -8,8 +8,6 @@ import { Dropdown } from "common/components/Dropdown/Dropdown";
 import { ReactComponent as IconMoon } from "common/icons/moon.svg";
 import { ReactComponent as IconSun } from "common/icons/sun.svg";
 
-import shortid from "shortid";
-
 import styles from "./UiKit.module.css";
 
 export const UiKit = () => {
@@ -37,7 +35,7 @@ export const UiKit = () => {
         </div>
         <div className={styles.checkboxSpace}>
           <CheckBox />
-          <CheckBox checked />
+          <CheckBox />
         </div>
         <div className={styles.radioSpace}>
           <RadioButton name="uniq_name" />

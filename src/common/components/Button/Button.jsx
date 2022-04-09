@@ -1,6 +1,7 @@
 import cx from "classnames";
 
 import styles from "./Button.module.css";
+import { capitalize } from "common/helpers/capitalize.js";
 
 export const Button = ({
   size = "big", // big, small
@@ -10,14 +11,6 @@ export const Button = ({
   children,
   className,
 }) => {
-  let themeClass;
-  let sizeClass;
-
-  // чтобы не заставлять передавать пропсы с большой буквы
-  function capitalize(s) {
-    return s[0].toUpperCase() + s.slice(1);
-  }
-
   // класс собираем
   const buttonClass = cx(styles._, className, {
     [styles[`theme${capitalize(theme)}`]]: true,

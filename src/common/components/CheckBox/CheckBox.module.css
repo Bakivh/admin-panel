@@ -41,24 +41,6 @@
   background-repeat: no-repeat;
 }
 
-/* 
-.textOnly > .span::before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 0px;
-  background: none;
-}
-
-.textOnly .text {
-  margin-left: 0px;
-}
-*/
-
 /* стили для чекбокса, находящегося в состоянии checked */
 ._ > .input:checked + .span::before {
   border-color: #459df5;

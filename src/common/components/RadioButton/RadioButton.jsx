@@ -8,6 +8,7 @@ export const RadioButton = ({
   label,
   checked,
   className,
+  onChange = () => {},
 }) => {
   // класс собираем
   const radioClass = cx(styles._, className, {
@@ -21,6 +22,7 @@ export const RadioButton = ({
         type="radio"
         name={name}
         checked={checked}
+        onChange={onChange}
       />
       <span className={styles.span}>
         {label && <div className={styles.text}>{label}</div>}
