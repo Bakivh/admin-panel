@@ -1,5 +1,5 @@
 /* базовые параметры для кнопки */
-.button {
+._ {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -11,13 +11,14 @@
 }
 
 /* базовые параметры для иконки в кнопке */
-.button__icon {
+.icon {
   width: 16px;
   height: 16px;
+  max-width: none;
 }
 
 /* базовые параметры для текста в кнопке */
-.button__text {
+.text {
   font-family: Ubuntu;
   font-style: normal;
 
@@ -25,57 +26,57 @@
 }
 
 /* большой размер и все паддинги марджины зависящие от него */
-.button_size-big {
+.sizeBig {
   height: 32px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.button_size-big.button_icon-only {
+.sizeBig.iconOnly {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.button_size-big > .button__icon + .button__text {
+.sizeBig > .icon + .text {
   margin-left: 8px;
 }
 
 /* маленький размер и все паддинги марджины зависящие от него */
-.button_size-small {
+.sizeSmall {
   height: 24px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.button_size-small.button_icon-only {
+.sizeSmall.iconOnly {
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.button_size-small > .button__icon + .button__text {
+.sizeSmall > .icon + .text {
   margin-left: 4px;
 }
 
 /* ширина на весь элемент, модификатор */
-.button_width-flexible {
+.widthFlexible {
   width: 100%;
   justify-content: center;
 }
 
 /* цветовая схема обычная */
-.button_theme-regular {
+.themeRegular {
   background: #459df5;
 }
 
-.button_theme-regular:hover {
+.themeRegular:hover {
   background: #3490ec;
 }
 
-.button_theme-regular:active {
+.themeRegular:active {
   background: #1271d1;
 }
 
-.button_theme-regular > .button__text {
+.themeRegular > .text {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -83,24 +84,24 @@
   color: #ffffff;
 }
 
-.button_theme-regular > .button__icon {
+.themeRegular > .icon {
   fill: #ffffff;
 }
 
 /* цветовая схема светлая */
-.button_theme-light {
+.themeLight {
   background: transparent;
 }
 
-.button_theme-light:hover {
+.themeLight:hover {
   background: #c6e2ff;
 }
 
-.button_theme-light:active {
+.themeLight:active {
   background: #51a8ff;
 }
 
-.button_theme-light > .button__text {
+.themeLight > .text {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -108,24 +109,24 @@
   color: #459df5;
 }
 
-.button_theme-light > .button__icon {
+.themeLight > .icon {
   fill: #459df5;
 }
 
 /* цветовая схема контрастная */
-.button_theme-contrast {
+.themeContrast {
   background: transparent;
 }
 
-.button_theme-contrast:hover {
+.themeContrast:hover {
   background: #c7c7c7;
 }
 
-.button_theme-contrast:active {
+.themeContrast:active {
   background: #6d6d6d;
 }
 
-.button_theme-contrast > .button__text {
+.themeContrast > .text {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -133,6 +134,6 @@
   color: #000000;
 }
 
-.button_theme-contrast > .button__icon {
+.themeContrast > .icon {
   fill: #000000;
 }

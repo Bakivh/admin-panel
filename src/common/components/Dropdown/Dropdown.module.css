@@ -1,7 +1,7 @@
-.dropdown {
+._ {
   display: flex;
   flex-direction: column;
-  padding: 8px 0px;
+  padding: 16px;
 
   width: 160px;
 
@@ -12,19 +12,11 @@
   border-radius: 8px;
 }
 
-.dropdown_size-short {
-  padding: 16px;
-}
-
-.dropdown > .checkbox-input {
+._.styleList > * {
   padding: 8px 16px;
 }
 
-.dropdown > .radio-input {
-  padding: 8px 16px;
-}
-
-.dropdown__label {
+.label {
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
@@ -32,8 +24,4 @@
   line-height: 16px;
 
   color: #000000;
-}
-
-.dropdown > .button {
-  margin-top: 8px;
 }
