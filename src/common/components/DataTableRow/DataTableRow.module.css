@@ -1,0 +1,16 @@
+._ {
+  background: white;
+  flex-basis: 48px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #ebf0f5;
+}
+
+.checkbox {
+  width: auto;
+  height: 100%;
+
+  padding: 12px 8px;
+}

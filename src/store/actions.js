@@ -1,0 +1,3 @@
+export const CHANGE_SEARCH_TEXT = "CHANGE_SEARCH_TEXT";
+export const UPLOAD_DATA = "UPLOAD_DATA";
+export const UPDATE_FILTERS = "UPDATE_FILTERS";

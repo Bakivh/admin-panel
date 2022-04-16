@@ -1,0 +1,17 @@
+._ {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+
+  padding: 12px 8px;
+}
+
+.text {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-size: 13px;
+  color: #000000;
+
+  white-space: nowrap;
+}

@@ -1,0 +1,31 @@
+._ {
+  flex-basis: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px 8px 8px;
+}
+
+.primary_color {
+  background: white;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 256px;
+  height: 32px;
+}
+
+.getFilters {
+  margin-left: 8px;
+  height: 32px;
+}
+
+.refresh {
+  margin-left: auto;
+  flex-basis: 32px;
+  height: 32px;
+}

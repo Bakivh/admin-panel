@@ -1,0 +1,14 @@
+._ {
+  background: #459df5;
+  flex-basis: 48px;
+
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  width: auto;
+  height: 100%;
+
+  padding: 12px 8px;
+}

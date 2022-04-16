@@ -1,7 +1,8 @@
-import { UiKit } from "modules/ui-kit/UiKit";
+import { Project } from "modules/project/Project";
+
 import "./reset.css";
 import "./style.css";
 
 export const App = () => {
-  return <UiKit />;
+  return <Project />;
 };

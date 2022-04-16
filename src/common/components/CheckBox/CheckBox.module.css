@@ -1,6 +1,5 @@
 ._ {
   display: flex;
-  background: #ffffff;
 }
 
 /* для элемента input c type="checkbox" */
@@ -39,6 +38,7 @@
   box-sizing: border-box;
   border-radius: 2px;
   background-repeat: no-repeat;
+  background: #ffffff;
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */

@@ -10,6 +10,7 @@ export const Button = ({
   fullWidth = false,
   children,
   className,
+  ...props
 }) => {
   // класс собираем
   const buttonClass = cx(styles._, className, {
@@ -20,7 +21,7 @@ export const Button = ({
   });
 
   return (
-    <button className={buttonClass}>
+    <button className={buttonClass} {...props}>
       {Icon && <Icon className={styles.icon} />}
       {children && <div className={styles.text}>{children}</div>}
     </button>

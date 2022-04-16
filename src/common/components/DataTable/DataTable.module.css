@@ -1,0 +1,13 @@
+._ {
+  display: flex;
+  flex-direction: column;
+  /*border: 2px solid var(--primary-color-dark);*/
+  box-sizing: border-box;
+  margin-top: 32px;
+  flex: 1;
+}
+
+.footer {
+  background: var(--primary-color-dark);
+  flex-basis: 48px;
+}
