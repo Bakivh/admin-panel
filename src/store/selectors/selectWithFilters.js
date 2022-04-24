@@ -14,32 +14,51 @@ const compareFunctionCreator = (field, sortRule) => {
 };
 
 // функция сортировки и фильтрации
-const sortAndFilter = (data, textFilter, sortRule) => {
-  return data
-    .filter((item) => {
-      for (var property in item) {
-        if (item[property].toString().includes(textFilter)) {
-          return true;
-        }
-        console.log(item[property]);
+const sortAndFilter = (data, textFilter, sortRule, pagination) => {
+  const fdata = data.filter((item) => {
+    for (var property in item) {
+      if (item[property].toString().includes(textFilter)) {
+        return true;
       }
-      return false;
-      // FIXME убрать заглушку на имя первого поля
-    })
-    .sort(
-      compareFunctionCreator(
-        sortRule.field === "" ? "id" : sortRule.field,
-        sortRule.sortOrder
+      console.log(item[property]);
+    }
+    return false;
+  });
+
+  const r = {
+    data: fdata
+      .sort(
+        // FIXME убрать заглушку на имя первого поля
+        compareFunctionCreator(
+          sortRule.field === "" ? "id" : sortRule.field,
+          sortRule.sortOrder
+        )
       )
-    );
+      .slice(
+        (pagination.curPage - 1) * pagination.rowsPerPage,
+        (pagination.curPage - 1) * pagination.rowsPerPage +
+          pagination.rowsPerPage
+      ),
+    dataSize: fdata.length,
+  };
+  return r;
 };
 
-// возвращает селектор
-export const selectWithFiltersSC = (textFilter, sortRule) => {
-  const selectWithFilters = (state) => {
-    const r = {
-      data: sortAndFilter(state.data.data, textFilter, sortRule),
+// TODO при диспатче фильтрации сбрасывать страницу на один
 
+// возвращает селектор
+export const selectWithFiltersSC = (textFilter, sortRule, pagination) => {
+  const selectWithFilters = (state) => {
+    const data = sortAndFilter(
+      state.data.data,
+      textFilter,
+      sortRule,
+      pagination
+    );
+
+    const r = {
+      data: data.data,
+      dataSize: data.dataSize,
       fields_with_width: state.data.fields_with_width,
     };
     return r;

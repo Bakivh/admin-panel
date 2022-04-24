@@ -8,6 +8,11 @@
 }
 
 .footer {
-  background: var(--primary-color-dark);
   flex-basis: 48px;
+
+  background: #459df5;
+  flex-basis: 48px;
+
+  display: flex;
+  align-items: center;
 }

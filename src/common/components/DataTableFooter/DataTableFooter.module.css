@@ -1,0 +1,46 @@
+._ {
+  flex-basis: 48px;
+
+  background: #ebf0f5;
+  flex-basis: 48px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 8px 16px;
+}
+
+.leftBar {
+  width: 78px;
+  height: 24px;
+}
+
+.pages {
+  display: flex;
+
+  margin: 0 0 0 auto;
+}
+.pageNum {
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  color: #459df5;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  padding: 4px 8px;
+}
+
+.pageNum:hover {
+  cursor: default;
+}
+
+.curPageNum {
+  color: #ffffff;
+  background: #459df5;
+  border-radius: 4px;
+}
