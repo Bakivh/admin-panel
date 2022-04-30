@@ -1,12 +1,15 @@
 import cx from "classnames";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setCurPageActionCreator } from "store/actionCreators/PageActionCreators";
+import { setCurPageActionCreator } from "store/actionCreators/pageActionCreators";
+import { calcCheckCount } from "store/selectors/calcCheckCount";
 
 import styles from "./DataTableFooter.module.css";
 
 export const DataTableFooter = ({ className, dataSize }) => {
   const { curPage, rowsPerPage } = useSelector((state) => state.page);
+
+  const checkCount = useSelector(calcCheckCount);
 
   const dispatch = useDispatch();
 
@@ -19,14 +22,12 @@ export const DataTableFooter = ({ className, dataSize }) => {
 
   let pages = [];
 
-  console.log(curPage);
-
   for (let i = 1; i <= pageCount; i++) {
     pages.push(
       <div
-        className={
-          i == curPage ? cx(styles.pageNum, styles.curPageNum) : styles.pageNum
-        }
+        className={cx(styles.pageNum, {
+          [styles.curPageNum]: i.toString() === curPage,
+        })}
         key={i}
         onClick={handleClick}
       >
@@ -37,7 +38,7 @@ export const DataTableFooter = ({ className, dataSize }) => {
 
   return (
     <div className={cx(styles._, className)}>
-      <div className={styles.leftBar}></div>
+      <div className={styles.leftBar}>Выбрано записей: {checkCount}</div>
       <div className={styles.pages}>{pages}</div>
     </div>
   );

@@ -5,3 +5,10 @@ export const SET_SORT_RULE = "SET_SORT_RULE";
 
 export const SET_CUR_PAGE = "SET_CUR_PAGE";
 export const SET_PAGE_COUNT = "SET_PAGE_COUNT";
+
+export const SET_CHECK_COUNT = "SET_CHECK_COUNT";
+export const ADD_CHECKED = "ADD_CHECKED";
+export const REMOVE_CHECKED = "REMOVE_CHECKED";
+export const CHECK_ALL = "CHECK_ALL";
+export const UNCHECK_ALL = "UNCHECK_ALL";
+export const SET_CURRENT_FILTER_IDS = "SET_CURRENT_FILTER_IDS";

@@ -1,19 +1,16 @@
 import { DataTable } from "common/components/DataTable/DataTable";
-import { useSelector } from "react-redux";
-import { selectWithFiltersSC } from "store/selectors/selectWithFilters";
+import { useSelector, useDispatch } from "react-redux";
+import { selectWithFilters } from "store/selectors/selectWithFilters";
+import { setCurrentIDs } from "store/actionCreators/addRemoveChecked";
 
 export const DataTableContainer = ({ className }) => {
-  const { textFilter } = useSelector((state) => state.filters);
-  const sortRule = useSelector((state) => state.sort);
-  const pagination = useSelector((state) => state.page);
-
-  const selectWithFilters = selectWithFiltersSC(
-    textFilter,
-    sortRule,
-    pagination
-  );
-
   const { data, dataSize, fields_with_width } = useSelector(selectWithFilters);
+
+  console.log("selector data");
+  const dispatch = useDispatch(); // FIXME почему то два акшена вызывается, вообще не пойму почему
+
+  // сохраняем состояние того что сейчас показывем
+  dispatch(setCurrentIDs(data.map((e) => e["id"])));
 
   return (
     <DataTable

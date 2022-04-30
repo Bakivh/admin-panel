@@ -7,7 +7,7 @@ import styles from "./DataTableRow.module.css";
 export const DataTableRow = ({ className, fields_with_width, dataItem }) => {
   return (
     <div className={cx(styles._, className)}>
-      <CheckBox className={styles.checkbox} />
+      <CheckBox id={dataItem["id"]} className={styles.checkbox} />
       {fields_with_width.map(({ name, width }) => (
         <DataTableRowItem key={name} width={width}>
           {dataItem[name]}

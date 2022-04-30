@@ -7,6 +7,7 @@ import { dataTableReducer } from "store/reducers/dataTableReducer";
 import { filtersReducer } from "store/reducers/filtersReducer";
 import { sortReducer } from "store/reducers/sortReduces";
 import { setPageReducer } from "store/reducers/setPageReducer";
+import { checkCountReducer } from "store/reducers/checkCountReducer";
 
 const rootReducer = combineReducers({
   searchField: searchReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   filters: filtersReducer,
   sort: sortReducer,
   page: setPageReducer,
+  checks: checkCountReducer,
 });
 
 export const store = createStore(rootReducer, composeWithDevTools());

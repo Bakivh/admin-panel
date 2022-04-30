@@ -8,7 +8,7 @@ import { ReactComponent as IconRefresh } from "common/icons/refresh.svg";
 import { useDispatch } from "react-redux";
 import { uploadDataActionCreator } from "store/actionCreators/uploadDataActionCreator";
 import { filtersActionCreator } from "store/actionCreators/filtersActionCreator";
-import { setCurPageActionCreator } from "store/actionCreators/PageActionCreators";
+import { setCurPageActionCreator } from "store/actionCreators/pageActionCreators";
 import { useSelector } from "react-redux";
 
 import { movies, fields_with_width } from "mocks/list";

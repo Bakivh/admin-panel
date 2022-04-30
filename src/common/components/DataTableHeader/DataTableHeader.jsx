@@ -7,7 +7,7 @@ import styles from "./DataTableHeader.module.css";
 export const DataTableHeader = ({ className, fields_with_width }) => {
   return (
     <div className={cx(styles._, className)}>
-      <CheckBox className={styles.checkbox} />
+      <CheckBox id="all" className={styles.checkbox} />
       {fields_with_width.map(({ name, alias, width }) => (
         <DataTableFieldContainer
           key={name}
