@@ -7,6 +7,8 @@ import {
   SET_CURRENT_FILTER_IDS,
 } from "store/actions";
 
+import { uniq_fast } from "common/helpers/uniq_fast";
+
 const defaultState = {
   checked: [],
   currentIDs: [],
@@ -27,11 +29,12 @@ export const checkCountReducer = (state = defaultState, action) => {
       };
     case SET_CURRENT_FILTER_IDS:
       state.currentIDs = action.payload;
+      //console.log("reducer current_ids");
       return state; //{ ...state, currentIDs: action.payload };
     case CHECK_ALL:
       return {
         ...state,
-        checked: [...state.checked, ...state.currentIDs, "all"],
+        checked: uniq_fast([...state.checked, ...state.currentIDs, "all"]),
       };
     case UNCHECK_ALL:
       return { ...state, checked: [] };

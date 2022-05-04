@@ -2,9 +2,9 @@ export const fields_with_width = [
   { name: "id", alias: "id", width: "50px" },
   { name: "title", alias: "Название", width: "150px" },
   { name: "type", alias: "Жанр", width: "100px" },
-  { name: "director", alias: "Режиссер", width: "260px" },
+  { name: "director", alias: "Режиссер", width: "200px" },
   { name: "status", alias: "Статус", width: "150px" },
-  { name: "watch_dt", alias: "Дата просмотра", width: "100px" },
+  { name: "watch_dt", alias: "Дата просмотра", width: "150px" },
 ];
 
 export const movies = [

@@ -21,6 +21,10 @@ export const Search = ({
     dispatch(searchActionCreator(event.target.value));
   };
 
+  const handleClear = () => {
+    dispatch(searchActionCreator(""));
+  };
+
   return (
     <div className={cx(styles._, className)}>
       <div className={styles.input}>
@@ -35,8 +39,8 @@ export const Search = ({
           {...props}
         />
 
-        {defaultValue && (
-          <button className={styles.button}>
+        {searchField !== "" && (
+          <button className={styles.button} onClick={handleClear}>
             <XMediumIcon className={styles.icon} />
           </button>
         )}

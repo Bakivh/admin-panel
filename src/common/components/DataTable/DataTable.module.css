@@ -3,15 +3,15 @@
   flex-direction: column;
   /*border: 2px solid var(--primary-color-dark);*/
   box-sizing: border-box;
-  margin-top: 32px;
-  flex: 1;
+  margin-top: 16px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .footer {
   flex-basis: 48px;
 
   background: #459df5;
-  flex-basis: 48px;
 
   display: flex;
   align-items: center;

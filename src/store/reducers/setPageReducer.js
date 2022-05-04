@@ -2,7 +2,7 @@ import { SET_CUR_PAGE } from "store/actions";
 import { SET_PAGE_COUNT } from "store/actions";
 
 const defaultState = {
-  curPage: 1,
+  curPage: "1",
   pageCount: 1,
   rowsPerPage: 10,
 };

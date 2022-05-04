@@ -8,7 +8,7 @@ export const DataTableBody = ({ className, fields_with_width, data }) => {
     <div className={cx(styles._, className)}>
       {data.map((e) => (
         <DataTableRow
-          key={e["id"]} // FIXME поменять на что-то другое. но как правильно кстати?
+          key={e["id"]}
           fields_with_width={fields_with_width}
           dataItem={e}
         />

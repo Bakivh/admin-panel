@@ -9,6 +9,7 @@ import styles from "./DataTableFooter.module.css";
 export const DataTableFooter = ({ className, dataSize }) => {
   const { curPage, rowsPerPage } = useSelector((state) => state.page);
 
+  //console.log("curpage" , curPage);
   const checkCount = useSelector(calcCheckCount);
 
   const dispatch = useDispatch();

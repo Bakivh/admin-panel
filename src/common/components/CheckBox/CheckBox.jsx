@@ -1,17 +1,17 @@
 import cx from "classnames";
 
-import {
-  removeCheckedActionCreator,
-  addCheckedActionCreator,
-  checkAllActionCreator,
-  uncheckAllActionCreator,
-} from "store/actionCreators/addRemoveChecked";
-import { useDispatch, useSelector } from "react-redux";
 import styles from "./CheckBox.module.css";
 
-export const CheckBox = ({ label, className, id, ...props }) => {
-  console.log("selector checkbox ");
-  const checked = useSelector((state) => state.checks.checked.includes(id));
+export const CheckBox = ({
+  label,
+  className,
+  id,
+  checked,
+  onChange = () => {},
+  ...props
+}) => {
+  // console.log("selector checkbox ");
+  /*const checked = useSelector((state) => state.checks.checked.includes(id));
 
   const dispatch = useDispatch();
 
@@ -26,13 +26,9 @@ export const CheckBox = ({ label, className, id, ...props }) => {
       dispatch(removeCheckedActionCreator(id));
     }
   };
-
+*/
   return (
-    <label
-      className={cx(styles._, className)}
-      onChange={handleChange}
-      {...props}
-    >
+    <label className={cx(styles._, className)} onChange={onChange} {...props}>
       <input
         className={styles.input}
         type="checkbox"

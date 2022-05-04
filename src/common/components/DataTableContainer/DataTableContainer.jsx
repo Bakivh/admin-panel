@@ -6,7 +6,7 @@ import { setCurrentIDs } from "store/actionCreators/addRemoveChecked";
 export const DataTableContainer = ({ className }) => {
   const { data, dataSize, fields_with_width } = useSelector(selectWithFilters);
 
-  console.log("selector data");
+  //console.log("selector data");
   const dispatch = useDispatch(); // FIXME почему то два акшена вызывается, вообще не пойму почему
 
   // сохраняем состояние того что сейчас показывем

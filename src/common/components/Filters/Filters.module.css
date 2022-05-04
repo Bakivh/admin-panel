@@ -1,5 +1,5 @@
 ._ {
-  flex-basis: 32px;
+  /*flex-basis: 32px;*/
   display: flex;
   justify-content: space-between;
   padding: 8px 8px 8px 8px;
@@ -28,4 +28,95 @@
   margin-left: auto;
   flex-basis: 32px;
   height: 32px;
+}
+
+.apply {
+  margin: 0 0 4px 0;
+}
+
+.clearFilters {
+  margin: 0 0 0 16px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 16px;
+  height: 88px;
+
+  background: #ebf0f5;
+  border-radius: 8px;
+
+  /* margin: 16px 0px; */
+  /*padding: 16px;*/
+}
+
+.filters__inputBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 288px;
+  height: 56px;
+
+  margin: 0 16px 0 0;
+}
+
+.filters__inputBlock_short {
+  width: 256px;
+}
+
+.filters__inputBlock_dropdown {
+  width: 192px;
+}
+
+.label {
+  width: 288px;
+  height: 16px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.label_short {
+  width: 256px;
+}
+
+.label_dropdown {
+  width: 192px;
+}
+
+.filters__inputsWrapper {
+  display: flex;
+  padding: 0px;
+
+  width: 288px;
+  height: 32px;
+  margin: 0px 0px;
+}
+
+.filters__inputsWrapper_short {
+  width: 256px;
+}
+
+.filters__input_idInput {
+  width: 126px;
+}
+
+.filters__input_dateInput {
+  width: 142px;
+}
+
+.filters__dropdownInput {
+  width: 192px;
+}
+
+.filters__input_last {
+  margin: 0 0 0 4px;
 }

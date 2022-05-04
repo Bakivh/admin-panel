@@ -1,22 +1,46 @@
 import cx from "classnames";
+
 import { useState } from "react";
 import _uniqueId from "lodash/uniqueId";
-
 import { ReactComponent as XMediumIcon } from "common/icons/x-medium.svg";
 import { ReactComponent as LockedIcon } from "common/icons/locked.svg";
+import { useSelector, useDispatch } from "react-redux";
+import { textInputActionCreator } from "store/actionCreators/filtersActionCreator";
 
 import styles from "./Input.module.css";
 
 export const Input = ({
   placeholder = "Введите",
-  defaultValue,
   incorrect = false,
   disabled = false,
-  label,
+  name,
+  label = null,
   type = "text",
+  prefix = null,
   className,
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
+  /*
+  const [text, setText] = useState(defaultValue);
+
+  const handleChange = (event) => {
+    setText(event.target.value);
+  }
+*/
+
+  const dispatch = useDispatch();
+  const text = useSelector((state) => state.filters[`${name}Input`]);
+
+  //  console.log([`${name}Input`]);
+  //  console.log("text ", text );
+
+  const handleChange = (event) => {
+    dispatch(textInputActionCreator(event.target.value, name));
+  };
+
+  const handleClear = () => {
+    dispatch(textInputActionCreator("", name));
+  };
 
   const inputClass = cx(styles.input, {
     [styles.input_incorrect]: incorrect,
@@ -31,17 +55,19 @@ export const Input = ({
         </label>
       )}
       <div className={inputClass}>
+        {prefix && <div className={styles.input__prefix}>{prefix}</div>}
         <input
           className={styles.inputText}
           placeholder={placeholder}
           type={type}
           id={id}
-          defaultValue={defaultValue}
+          value={text}
           disabled={disabled}
+          onChange={handleChange}
         />
-        {defaultValue && (
+        {text && text !== "" && (
           <button className={styles.button}>
-            <XMediumIcon className={styles.icon} />
+            <XMediumIcon className={styles.icon} onClick={handleClear} />
           </button>
         )}
         {disabled && <LockedIcon className={styles.icon} />}

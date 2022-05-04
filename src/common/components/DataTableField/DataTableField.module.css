@@ -16,3 +16,14 @@
   white-space: nowrap;
   margin: 0px 4px;
 }
+
+.icon {
+  fill: white;
+  stroke: white;
+  width: 16px;
+  height: 16px;
+}
+
+.icon_up {
+  transform: rotate(180deg);
+}

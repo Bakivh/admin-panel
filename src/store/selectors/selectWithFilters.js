@@ -11,10 +11,40 @@ const compareFunctionCreator = (field, sortRule) => (a_in, b_in) => {
   return 0;
 };
 
+/*
+dateWatchedFrom: "",
+dateWatchedTo: "",
+filmStatus: [],
+idFrom: "",
+idTo:
+
+id
+    status: "watched",
+    watch_dt:
+*/
+const applyFilters = (array, filters) =>
+  array.filter(
+    (item) =>
+      !(
+        // описываем услвоия "неправильности"
+        (
+          (filters.idFrom !== "" && item.id < filters.idFrom) ||
+          (filters.idTo !== "" && item.id > filters.idTo) ||
+          (filters.dateWatchedFrom !== "" &&
+            (item.watch_dt < filters.dateWatchedFrom ||
+              item.watch_dt === "")) ||
+          (filters.dateWatchedTo !== "" &&
+            (item.watch_dt > filters.dateWatchedTo || item.watch_dt === "")) ||
+          (filters.filmStatus.length > 0 &&
+            !filters.filmStatus.includes(item.status))
+        )
+      )
+  );
+
 // функция сортировки и фильтрации
-const sortAndFilter = (data, textFilter, sortRule, pagination) => {
+const sortAndFilter = (data, textFilter, sortRule, pagination, filters) => {
   // фильтруем сначала
-  const filteredData = data.filter((item) => {
+  const filteredData_1stage = data.filter((item) => {
     for (var property in item) {
       if (item[property].toString().includes(textFilter)) {
         return true;
@@ -22,6 +52,8 @@ const sortAndFilter = (data, textFilter, sortRule, pagination) => {
     }
     return false;
   });
+
+  const filteredData = applyFilters(filteredData_1stage, filters);
 
   return {
     data: filteredData
@@ -51,7 +83,8 @@ export const selectWithFilters = (state) => {
     state.data.data,
     state.filters.textFilter,
     state.sort,
-    state.page
+    state.page,
+    state.filters
   );
 
   return {

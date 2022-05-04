@@ -1,7 +1,7 @@
 import { SET_SORT_RULE } from "store/actions";
 
 const defaultState = {
-  field: "",
+  field: "id",
   sortOrder: "asc",
 };
 

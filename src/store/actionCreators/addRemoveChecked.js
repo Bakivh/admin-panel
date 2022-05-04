@@ -33,6 +33,7 @@ export const uncheckAllActionCreator = () => {
 };
 
 export const setCurrentIDs = (ids) => {
+  //console.log("setcurrentids")
   return {
     type: SET_CURRENT_FILTER_IDS,
     payload: ids,
