@@ -86,6 +86,7 @@
 
 .themeRegular > .icon {
   fill: #ffffff;
+  stroke: #ffffff;
 }
 
 /* цветовая схема светлая */
@@ -111,6 +112,7 @@
 
 .themeLight > .icon {
   fill: #459df5;
+  stroke: #459df5;
 }
 
 /* цветовая схема контрастная */
@@ -136,4 +138,5 @@
 
 .themeContrast > .icon {
   fill: #000000;
+  stroke: #000000;
 }

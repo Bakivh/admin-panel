@@ -90,6 +90,18 @@
   padding: 0;
 }
 
+.input__prefix {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+
+  margin: 0px 4px;
+}
+
 .icon {
   width: 16px;
   height: 16px;

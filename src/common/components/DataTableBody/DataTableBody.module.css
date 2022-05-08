@@ -1,0 +1,7 @@
+._ {
+  background: white;
+  /* flex: 1;*/
+  min-height: 48px;
+  height: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,18 @@
+._ {
+  display: flex;
+  flex-direction: column;
+  /*border: 2px solid var(--primary-color-dark);*/
+  box-sizing: border-box;
+  margin-top: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.footer {
+  flex-basis: 48px;
+
+  background: #459df5;
+
+  display: flex;
+  align-items: center;
+}

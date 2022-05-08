@@ -1,0 +1,132 @@
+._ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 480px;
+  height: 100vh;
+
+  /* day/white */
+
+  background: #ffffff;
+  /* form elevation */
+
+  box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.2), 0px 0px 16px rgba(0, 0, 0, 0.15),
+    0px 0px 4px rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  overflow: auto;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+
+  height: 56px;
+  width: 100%;
+
+  background: #459df5;
+}
+
+.cardHeader__label {
+  height: 32px;
+  width: auto;
+  /* headline */
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+
+  letter-spacing: -0.2px;
+
+  color: #bad8f5;
+
+  margin: 0px 8px;
+}
+
+.cardHeader__closeButton {
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.cardHeader__xIcon {
+  width: 16px;
+  height: 16px;
+
+  stroke: white;
+  fill: white;
+}
+
+.cardContent {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 16px;
+}
+
+.cardContent__inputBlock {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 32px 0 0 0;
+}
+
+.cardContent__label {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height, or 123% */
+
+  /* day/black */
+
+  color: #000000;
+}
+
+.cardContent__input {
+  width: 100%;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+
+  height: 48px;
+  width: 100%;
+
+  background: #ebf0f5;
+}
+
+.cardFooter__status {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #459df5;
+
+  /* identical to box height, or 123% */
+
+  text-align: left;
+}

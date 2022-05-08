@@ -8,6 +8,7 @@ export const RadioButton = ({
   label,
   checked,
   className,
+  value,
   onChange = () => {},
 }) => {
   // класс собираем
@@ -15,12 +16,15 @@ export const RadioButton = ({
     [styles.textOnly]: textOnly,
   });
 
+  //FIXME: value и name разные
+
   return (
     <label className={radioClass}>
       <input
         className={styles.input}
         type="radio"
         name={name}
+        value={value}
         checked={checked}
         onChange={onChange}
       />

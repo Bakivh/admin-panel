@@ -1,0 +1,29 @@
+._ {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+
+  padding: 12px 8px;
+}
+
+.text {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-size: 13px;
+  color: #ffffff;
+
+  white-space: nowrap;
+  margin: 0px 4px;
+}
+
+.icon {
+  fill: white;
+  stroke: white;
+  width: 16px;
+  height: 16px;
+}
+
+.icon_up {
+  transform: rotate(180deg);
+}
