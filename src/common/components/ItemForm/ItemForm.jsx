@@ -6,7 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "common/components/Button/Button";
 import { ItemFormInput } from "common/components/ItemFormInput/ItemFormInput";
 import { ItemFormDropdown } from "common/components/ItemFormDropdown/ItemFormDropdown";
-import { hideItemForm } from "store/actionCreators/itemFormInputActionCreator";
+import {
+  hideItemForm,
+  setCurStatus,
+} from "store/actionCreators/itemFormInputActionCreator";
+import { updateByIdActionCreator } from "store/actionCreators/uploadDataActionCreator";
 
 import styles from "./ItemForm.module.css";
 
@@ -14,7 +18,9 @@ export const ItemForm = ({
   //id,
   className,
 }) => {
-  const { id, showItemForm } = useSelector((state) => state.itemForm);
+  const { showItemForm, curStatus, ...row } = useSelector(
+    (state) => state.itemForm
+  );
 
   //console.log("showItemForm ", showItemForm);
 
@@ -24,12 +30,28 @@ export const ItemForm = ({
     dispatch(hideItemForm());
   };
 
+  const handleSaveClick = () => {
+    //console.log("saved ");
+    dispatch(
+      updateByIdActionCreator({
+        id: row.id,
+        title: row.titleInput,
+        type: row.typeInput,
+        director: row.directorInput,
+        status: row.statusInput,
+        watch_dt: row.watch_dtInput,
+      })
+    );
+    dispatch(setCurStatus("Сохранено"));
+  };
+
   /*
   const inputClass = cx(styles.input, {
     [styles.input_incorrect]: incorrect,
     [styles.input_disabled]: disabled,
   });
 
+  id: 1
   title: "Челюсти 1",
     type: "ужасы",
     director: "Спилберг",
@@ -40,7 +62,7 @@ export const ItemForm = ({
     showItemForm && (
       <div className={cx(styles._, className)}>
         <div className={styles.cardHeader}>
-          <div className={styles.cardHeader__label}>Фильм Id {id}</div>
+          <div className={styles.cardHeader__label}>Фильм Id {row.id}</div>
           <div
             className={styles.cardHeader__closeButton}
             onClick={handleCloseClick}
@@ -87,7 +109,13 @@ export const ItemForm = ({
           </div>
         </div>
         <div className={styles.cardFooter}>
-          <Button size="big" theme="regular" Icon={IconSave}>
+          <div className={styles.cardFooter__status}>{curStatus}</div>
+          <Button
+            size="big"
+            theme="regular"
+            Icon={IconSave}
+            onClick={handleSaveClick}
+          >
             Сохранить
           </Button>
         </div>

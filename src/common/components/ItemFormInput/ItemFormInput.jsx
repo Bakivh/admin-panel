@@ -3,6 +3,7 @@ import { itemFormInputActionCreator } from "store/actionCreators/itemFormInputAc
 import { Input } from "common/components/Input/Input";
 
 export const ItemFormInput = ({ name, ...props }) => {
+  // FIXME: сделать компонент "глупым"
   const dispatch = useDispatch();
   const text = useSelector((state) => state.itemForm[`${name}Input`]);
 

@@ -1,4 +1,4 @@
-import { UPLOAD_DATA } from "store/actions";
+import { UPLOAD_DATA, UPDATE_BY_ID } from "store/actions";
 
 const defaultState = {
   data: [],
@@ -12,6 +12,16 @@ export const dataTableReducer = (state = defaultState, action) => {
         ...state,
         data: action.payload.data,
         fields_with_width: action.payload.fields_with_width,
+      };
+    case UPDATE_BY_ID:
+      return {
+        ...state,
+        data: [
+          ...state.data.filter((item) =>
+            item.id === action.payload.id ? false : true
+          ),
+          action.payload,
+        ],
       };
     default:
       return state;

@@ -108,7 +108,7 @@
 .cardFooter {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
 
@@ -116,4 +116,17 @@
   width: 100%;
 
   background: #ebf0f5;
+}
+
+.cardFooter__status {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #459df5;
+
+  /* identical to box height, or 123% */
+
+  text-align: left;
 }

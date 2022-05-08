@@ -3,6 +3,7 @@ import {
   SHOW_ITEM_FORM,
   HIDE_ITEM_FORM,
   SET_ITEMFORM_ALL_INPUTS,
+  SET_CUR_STATUS,
 } from "store/actions";
 
 const defaultState = {
@@ -13,10 +14,16 @@ const defaultState = {
   statusInput: "",
   watch_dtInput: "",
   showItemForm: false,
+  curStatus: "",
 };
 
 export const itemFormReducer = (state = defaultState, action) => {
   switch (action.type) {
+    case SET_CUR_STATUS:
+      return {
+        ...state,
+        curStatus: action.payload,
+      };
     case SET_ITEMFORM_INPUT:
       return {
         ...state,
@@ -41,6 +48,7 @@ export const itemFormReducer = (state = defaultState, action) => {
         directorInput: action.payload.director,
         statusInput: action.payload.status,
         watch_dtInput: action.payload.watch_dt,
+        curStatus: "",
       };
     default:
       return state;

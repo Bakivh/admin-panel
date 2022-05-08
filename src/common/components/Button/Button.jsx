@@ -10,6 +10,7 @@ export const Button = ({
   fullWidth = false,
   children,
   className,
+  onClick = () => {},
   ...props
 }) => {
   // класс собираем
@@ -21,7 +22,7 @@ export const Button = ({
   });
 
   return (
-    <button className={buttonClass} {...props}>
+    <button className={buttonClass} onClick={onClick} {...props}>
       {Icon && <Icon className={styles.icon} />}
       {children && <div className={styles.text}>{children}</div>}
     </button>

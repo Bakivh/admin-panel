@@ -2,6 +2,7 @@ import {
   SET_ITEMFORM_INPUT,
   SHOW_ITEM_FORM,
   HIDE_ITEM_FORM,
+  SET_CUR_STATUS,
   SET_ITEMFORM_ALL_INPUTS,
 } from "store/actions";
 
@@ -31,5 +32,12 @@ export const showItemForm = () => {
 export const hideItemForm = () => {
   return {
     type: HIDE_ITEM_FORM,
+  };
+};
+
+export const setCurStatus = (status) => {
+  return {
+    type: SET_CUR_STATUS,
+    payload: status,
   };
 };
