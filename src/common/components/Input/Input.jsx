@@ -4,8 +4,6 @@ import { useState } from "react";
 import _uniqueId from "lodash/uniqueId";
 import { ReactComponent as XMediumIcon } from "common/icons/x-medium.svg";
 import { ReactComponent as LockedIcon } from "common/icons/locked.svg";
-import { useSelector, useDispatch } from "react-redux";
-import { textInputActionCreator } from "store/actionCreators/filtersActionCreator";
 
 import styles from "./Input.module.css";
 
@@ -17,17 +15,14 @@ export const Input = ({
   label = null,
   type = "text",
   prefix = null,
+  onClear = () => {},
+  onChange = () => {},
+  value,
   className,
 }) => {
   const [id] = useState(_uniqueId("prefix-"));
+
   /*
-  const [text, setText] = useState(defaultValue);
-
-  const handleChange = (event) => {
-    setText(event.target.value);
-  }
-*/
-
   const dispatch = useDispatch();
   const text = useSelector((state) => state.filters[`${name}Input`]);
 
@@ -41,7 +36,7 @@ export const Input = ({
   const handleClear = () => {
     dispatch(textInputActionCreator("", name));
   };
-
+*/
   const inputClass = cx(styles.input, {
     [styles.input_incorrect]: incorrect,
     [styles.input_disabled]: disabled,
@@ -61,13 +56,14 @@ export const Input = ({
           placeholder={placeholder}
           type={type}
           id={id}
-          value={text}
+          name={name}
+          value={value}
           disabled={disabled}
-          onChange={handleChange}
+          onChange={onChange}
         />
-        {text && text !== "" && (
+        {value && value !== "" && (
           <button className={styles.button}>
-            <XMediumIcon className={styles.icon} onClick={handleClear} />
+            <XMediumIcon className={styles.icon} onClick={onClear} />
           </button>
         )}
         {disabled && <LockedIcon className={styles.icon} />}

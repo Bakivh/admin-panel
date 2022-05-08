@@ -35,6 +35,8 @@ export const DropdownInput = ({ name, type = "text", className }) => {
     dispatch(textInputActionCreator(event.target.value, name ));
   };*/
 
+  // FIXME: сделать универсальный dropdown (с типом выбора)
+
   return (
     <>
       <div className={cx(styles._, className)} onClick={handleClick}>

@@ -8,6 +8,7 @@ import { filtersReducer } from "store/reducers/filtersReducer";
 import { sortReducer } from "store/reducers/sortReduces";
 import { setPageReducer } from "store/reducers/setPageReducer";
 import { checkCountReducer } from "store/reducers/checkCountReducer";
+import { itemFormReducer } from "store/reducers/itemFormReducer";
 
 const rootReducer = combineReducers({
   searchField: searchReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   sort: sortReducer,
   page: setPageReducer,
   checks: checkCountReducer,
+  itemForm: itemFormReducer,
 });
 
 export const store = createStore(rootReducer, composeWithDevTools());

@@ -8,6 +8,11 @@
   border-bottom: 1px solid #ebf0f5;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+}
+
 .checkbox {
   width: auto;
   height: 100%;

@@ -3,7 +3,7 @@ import cx from "classnames";
 
 import { Search } from "common/components/Search/Search";
 import { Button } from "common/components/Button/Button";
-import { Input } from "common/components/Input/Input";
+import { FiltersInput } from "common/components/FiltersInput/FiltersInput";
 import { DropdownInput } from "common/components/DropdownInput/DropdownInput";
 import { ReactComponent as IconFilter } from "common/icons/filter.svg";
 import { ReactComponent as IconRefresh } from "common/icons/refresh.svg";
@@ -107,13 +107,13 @@ export const Filters = ({ className }) => {
           <div className={styles.filters__inputBlock}>
             <div className={styles.label}>Дата просмотра</div>
             <div className={styles.filters__inputsWrapper}>
-              <Input
+              <FiltersInput
                 prefix="с"
                 className={styles.filters__input_dateInput}
                 name="dateWatchedFrom"
                 placeholder="yyyy-mm-dd"
               />
-              <Input
+              <FiltersInput
                 prefix="по"
                 className={cx(
                   styles.filters__input_dateInput,
@@ -153,13 +153,13 @@ export const Filters = ({ className }) => {
                 styles.filters__inputsWrapper_short
               )}
             >
-              <Input
+              <FiltersInput
                 prefix="от"
                 className={styles.filters__input_idInput}
                 name="idFrom"
                 placeholder=""
               />
-              <Input
+              <FiltersInput
                 prefix="до"
                 className={cx(
                   styles.filters__input_idInput,
